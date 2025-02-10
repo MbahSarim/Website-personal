@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Animasi Burung Bergerak</title>
+	<style>
+	    body {
+		    background-color: skyblue;
+			overflow: hidden;
+			margin: 0;
+		}
+		.burung {
+		    position: absolute;
+			width: 100px;
+			top: 50%
+			left: -100px;
+			animation: terbang 5s linear infinite;
+		}
+		@keyframes terbang {
+		    0% {
+			    left: -100px;
+				top: 50%
+	}
+	        50% {
+			    top: 40%;
+			}
+			100% {
+			    left: 100%;
+				top: 50%
+			}
+		}
+	</style>
+</head>
+<body>
+    <img src="burung elang.png" class="burung" alt="Burung Terbang">
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCYTPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Animasi Kotak dengan JavaScript</title>
+	<style>
+	    .box {
+		    width: 50px;
+			height: 50px;
+			background-color: blue;
+			position: absolute;
+			top: 100px;
+			left: 0;
+			transition: left 1s ease-in-out;
+		}
+	</style>
+</head>
+<body>
+    <h2>Animasi Kotak Bergerak</h2>
+	<button onclick="moveBox()">Gerakkan Kotak</button>
+	<div class="box" id="box"></div>
+<script>
+        function moveBox() {
+		    let box = document.getElementById("box");
+			let currentLeft = parseInt(window.getComputedStyle(box).left);
+			if (currentLeft === 0) {
+			    box.style.left = "1300px";
+			} else {
+			    box.style.left = "0px";
+			}
+		}
+	</script>
+</body>
+</html>
